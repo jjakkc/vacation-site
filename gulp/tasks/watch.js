@@ -12,6 +12,7 @@ gulp.task("watch", function(){
         }
     });
 
+    // reloads browser w/e something changes in html/css files
     watch("./app/index.html", function(){
         browserSync.reload();
     });
@@ -20,6 +21,8 @@ gulp.task("watch", function(){
     });
 });
 
+// css doesn't need to refresh browser on changes so this sends
+// new code to browser
 gulp.task("cssInject",["styles"], function(){
     return gulp.src("./app/temp/styles/styles.css")
         .pipe(browserSync.stream());

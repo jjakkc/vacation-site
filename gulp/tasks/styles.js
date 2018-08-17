@@ -6,6 +6,7 @@ var gulp = require("gulp"),
     cssImport = require("postcss-import"),
     mixins = require("postcss-mixins");
 
+// formats the css file to proper synatax when saving
 gulp.task("styles", function(){
     // console.log("Running css task");
     return gulp.src("./app/assets/styles/styles.css")
