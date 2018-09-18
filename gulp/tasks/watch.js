@@ -19,6 +19,10 @@ gulp.task("watch", function(){
     watch("./app/assets/styles/**/*.css", function(){
         gulp.start("cssInject");
     });
+
+    watch("./app/assets/scripts/**/*.js", function(){
+        gulp.start("scriptsRefresh");
+    });
 });
 
 // css doesn't need to refresh browser on changes so this sends
@@ -26,4 +30,9 @@ gulp.task("watch", function(){
 gulp.task("cssInject",["styles"], function(){
     return gulp.src("./app/temp/styles/styles.css")
         .pipe(browserSync.stream());
+});
+
+// refreshes browser on js file changes after scripts.js runs
+gulp.task("scriptsRefresh", ["scripts"], function(){
+    browserSync.reload();
 });
