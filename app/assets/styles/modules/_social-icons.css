@@ -1,0 +1,22 @@
+.social-icons {
+    text-align: center;
+
+    &__icon {
+        text-align: center;
+        background-color: $mainOrange;
+        display: inline-block;
+        margin: 0 5px;
+        width: 72px;
+        height: 72px;
+        position: relative;
+
+        /* targetting span elements with icon class */
+        .icon {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

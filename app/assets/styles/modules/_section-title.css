@@ -7,6 +7,11 @@
         color: $mainBlue;
     }
 
+    &--less-margin {
+        margin-bottom: 1.3rem;
+        margin-top: 0;
+    }
+
     @mixin atSmall {
         font-size: 3.75rem;
     }
